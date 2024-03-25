@@ -240,10 +240,15 @@ void hide_cursor();
 void show_cursor();
 void realtime_input();
 void scale(struct list_point *points, int scale);
+void welcome_view();
+
 int main() {
     setlocale(LC_ALL, "");
 #ifdef DEBUG
+
     // hide_cursor();
+    clear();
+    welcome_view();
     realtime_input();
     // show_cursor();
 #elif RELEASE
@@ -271,6 +276,25 @@ int main() {
 #endif
     clear();
     return 0;
+}
+void welcome_view(){
+    printf(
+        "\033[33m"
+        "  ───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───\n"
+        "  ───█▒▒░░░░░░░░░▒▒█───\n"
+        "  ────█░░█░░░░░█░░█────\n"
+        "  ─▄▄──█░░░▀█▀░░░█──▄▄─\n"
+        "  █░░█─▀▄░░░░░░░▄▀─█░░█\n"
+        "  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"
+        "  █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n"
+        "  █░░║║║╠─║─║─║║║║║╠─░░█\n"
+        "  █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█\n"
+        "  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"
+        "\n"
+        "\033[0m"
+        "type EQUATION to see REVALUATION\n"
+    );
+    fflush(stdout);
 }
 void hide_cursor(){
     printf("\e[?25l");
