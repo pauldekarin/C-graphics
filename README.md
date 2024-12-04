@@ -4,6 +4,7 @@
 
 This project is a console-based application developed in C that takes an equation input from the user, processes it using Reverse Polish Notation (RPN), and plots the graph in real-time.
 
+![](./media/polish[video].gif)
 ## Development Environment
 
 - **Language**: C
@@ -53,6 +54,7 @@ log(x)
 Once the application is running, use the following commands to interact with it:
 
 `<equation>`: Plots the graph of the specified equation.
+`ESC` : Exit
 
 ## Supported Operations
 The application supports the following operations:
